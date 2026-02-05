@@ -1,0 +1,191 @@
+<HTML lang="en"> 
+  <BODY>
+      <meta charset="UTF-8">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+      <link href="./css/main.css" rel="stylesheet">
+      <title>ACERP</title>
+    <style>
+    @keyframes zoomInOut {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+      user-select: none;
+    }
+    .BG1 {
+      width: 945px;
+      height: 545px;
+      background: url("./img/BG1.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+    }
+    .SHUA {
+      width: 304px;
+      height: 258px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 169px;
+      left: 321px;
+      overflow: hidden;
+      animation: zoomInOut 2.5s infinite;
+    }
+    .SHUA-LOGO {
+      width: 226px;
+      height: 173px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left: 39px;
+      overflow: hidden;
+    }
+    .SHUA-LOGO-FOTO {
+      width: 226px;
+      height: 173px;
+      background: url("./img/logos.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+    }
+    .SHUA-TEXT {
+      width: 304px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 125px;
+      left: 0px;
+      font-family: TBC Contractica CAPS;
+      font-weight: Bold;
+      font-size: 20px;
+      opacity: 1;
+      text-align: center;
+    }
+    .KUBIKI1 {
+      width: 22px;
+      height: 22px;
+      background: rgba(255,255,255,0.15000000596046448);
+      opacity: 1;
+      position: absolute;
+      top: 180px;
+      left: 73px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      overflow: hidden;
+    }
+    .KUBIKI2 {
+      width: 26px;
+      height: 26px;
+      background: rgba(255,255,255,0.15000000596046448);
+      opacity: 1;
+      position: absolute;
+      top: 178px;
+      left: 110px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      overflow: hidden;
+    }
+    .KUBIKI3 {
+      width: 30px;
+      height: 30px;
+      background: rgba(255,255,255,0.15000000596046448);
+      opacity: 1;
+      position: absolute;
+      top: 176px;
+      left: 151px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      overflow: hidden;
+    }
+    .KUBIKI4 {
+      width: 34px;
+      height: 34px;
+      background: rgba(255,255,255,0.15000000596046448);
+      opacity: 1;
+      position: absolute;
+      top: 174px;
+      left: 196px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      overflow: hidden;
+    }
+  </style>
+  <DIV>
+          <div class="BG1">
+              </div>
+                  <div class="SHUA">
+                      <div class="SHUA-LOGO">
+                          <div class="SHUA-LOGO-FOTO animate__animated animate__fadeInDown">
+                          </div>
+                      </div>
+                      <span class="SHUA-TEXT">გთხოვთ მოითმინოთ...</span>
+                      <div class="KUBIKI1 animate__animated animate__fadeInUp">
+                      </div>
+                      <div class="KUBIKI2 animate__animated animate__fadeInUp">
+                      </div>
+                      <div class="KUBIKI3 animate__animated animate__fadeInUp">
+                      </div>
+                      <div class="KUBIKI4 animate__animated animate__fadeInUp">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const kubikis = document.querySelectorAll('.KUBIKI1, .KUBIKI2, .KUBIKI3, .KUBIKI4');
+      let currentIndex = 0;
+
+      const animateKubiki = () => {
+          kubikis.forEach(kubiki => {
+              kubiki.style.background = '';
+              kubiki.style.boxShadow = '';
+          });
+
+          kubikis[currentIndex].style.background = 'rgba(121,171,254,1)';
+          kubikis[currentIndex].style.boxShadow = '0px 0px 25px rgba(121, 172, 254, 0.65)';
+
+          currentIndex = (currentIndex + 1) % kubikis.length;
+
+          setTimeout(animateKubiki, 700);
+      };
+
+      animateKubiki();
+
+      setTimeout(() => {
+          window.location.href = 'register.html';
+      }, Math.random() * 5000 + 5000);
+  });
+  </script>
+</BODY>

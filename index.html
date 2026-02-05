@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <title>Ace RP | ლაუნჩერი</title>
+</head>
+<style>
+@font-face {
+    font-family: 'Regular';
+    src: url('./fonts/bpg_nino_mtavruli_bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bold';
+    src: url('./fonts/TBCContractica-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Medium';
+    src: url('./fonts/medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Mediumi';
+    src: url('./fonts/TBCContracticaCAPS-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bregular';
+    src: url('./fonts/bpg_nino_mtavruli_normal.otf') format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  user-select: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; /* Make sure the background is transparent */
+  border-radius: 10px;
+}
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.BG1 {
+  width: 945px;
+  height: 545px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: gray;
+}
+.BG2 {
+  width: 945px;
+  height: 545px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+/* .BG3 {
+  width: 945px;
+  height: 545px;
+  background: url("./img/background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+} */
+.TEQSTUREBI {
+  width: 104px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 436px;
+  left: 772px;
+  overflow: hidden;
+}
+.TEQSTUREBI-TEXT {
+  width: 84px;
+  color: rgba(231,231,231,1);
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  /* font-family: TBC Contractica CAPS; */
+  font-family: Medium;
+  font-size: 12px;
+  opacity: 1;
+  text-align: right;
+}
+.GRAFIKA {
+  width: 94px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 413px;
+  left: 777px;
+  overflow: hidden;
+}
+.GRAFIKA-CHASARTVELI:hover {
+  width: 13px;
+  height: 13px;
+  background: linear-gradient(rgba(62,139,255,1), rgba(114,170,255,1));
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+}
+.MOTAMASHEEBI {
+  width: 134px;
+  height: 53px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 386px;
+  left: 0px;
+  overflow: hidden;
+}
+.MOTAMASHEEBI-UKANA-FONI {
+  width: 134px;
+  height: 53px;
+  background: rgba(0,0,0,0.25);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+.MOTAMASHEEBI-FOTO {
+  width: 134px;
+  height: 53px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.MOTAMASHEEBI-CHARCHO {
+  width: 89px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  overflow: hidden;
+}
+.MOTAMASHEEBI-MWVANE-ICON {
+  width: 7px;
+  height: 7px;
+  background: rgba(70,206,91,1);
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgba(0.27450981736183167, 0.8078431487083435, 0.35686275362968445, 0.5);
+}
+.MOTAMASHEEBI-TEXT {
+  width: 89px;
+  color: rgba(231,231,231,0.800000011920929);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* font-family: TBC Contractica CAPS; */
+  font-family: Regular;
+  font-size: 10px;
+  opacity: 1;
+  text-align: left;
+}
+.MOTAMASHEEBI-RAODENOBA {
+  width: 77px;
+  color: rgba(231,231,231,1);
+  position: absolute;
+  top: 210px;
+  left: 880px;
+  /* font-family: TBC Contractica CAPS; */
+  font-family: Bold;
+  font-size: 10px;
+  opacity: 1;
+  text-align: left;
+  font-size: 18px;
+}
+.max-raodenoba{
+  position: absolute;
+  color: rgba(231,231,231,1);
+  top: 420px;
+  left: 200px;
+  font-family: Medium;
+  font-size: 10px;
+}
+.SERVERIS-SHESAXEB {
+  width: 568px;
+  height: 168px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 157px;
+  left: 35px;
+  overflow: hidden;
+}
+.SERVERIS-SHESAXEB-TEXT {
+  width: 218px;
+  color: rgba(231,231,231,1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: TBC Contractica CAPS;
+  font-family: Bold;
+  font-size: 13px;
+  opacity: 1;
+  text-align: left;
+}
+.SERVERIS-SHESAXEB-AGWERA-1 {
+  width: 528px;
+  color: rgba(231,231,231,0.800000011920929);
+  position: absolute;
+  top: 31px;
+  left: 20px;
+  font-family: TBC Contractica CAPS;
+  font-family: Regular;
+  font-size: 12px;
+  opacity: 1;
+  text-align: left;
+}
+.SERVERIS-SHESAXEB-AGWERA-2 {
+  width: 528px;
+  color: rgba(231,231,231,0.800000011920929);
+  position: absolute;
+  top: 73px;
+  left: 20px;
+  font-family: TBC Contractica CAPS;
+  font-family: Regular;
+  font-size: 12px;
+  opacity: 1;
+  text-align: left;
+}
+.SERVERIS-SHESAXEB-AGWERA-3 {
+  width: 528px;
+  color: rgba(231,231,231,0.800000011920929);
+  position: absolute;
+  top: 129px;
+  left: 20px;
+  font-family: TBC Contractica CAPS;
+  font-family: Regular;
+  font-size: 12px;
+  opacity: 1;
+  text-align: left;
+}
+.GASVLA {
+  width: 30px;
+  height: 30px;
+  background: url("./img/Group 12.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 20px;
+  left: 905px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.GASVLA:hover {
+  width: 30px;
+  height: 30px;
+  background: url("./img/Group 12.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 905px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.CHAKECVA {
+  width: 30px;
+  height: 30px;
+  background: url("./img/Group 13.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 20px;
+  left: 870px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.CHAKECVA:hover {
+  width: 30px;
+  height: 30px;
+  background: url("./img/Group 13.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 870px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.SET {
+  width: 30px;
+  height: 30px;
+  background: url("./img/Group 14.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 20px;
+  left: 835px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.SET:hover {
+  width: 30px;
+  height: 30px;
+  background: url("./img/Group 14.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 835px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.LAN {
+  width: 66.2px;
+  height: 29px;
+  background: url("./img/Group 15.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 20px;
+  left: 745px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.LAN:hover {
+  width: 66.2px;
+  height: 29px;
+  background: url("./img/Group 15.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 745px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.SAITI {
+  width: 61px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 35px;
+  left: 249px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.SAITI-TEXT {
+  width: 61px;
+  color: rgba(255,255,255,0.800000011920929);
+  position: absolute;
+  top: -5px;
+  /* left: -230px; */
+  font-family: 'Medium';
+  /* font-family: Bold; */
+  font-size: 10px;
+  opacity: 1;
+  text-align: center;
+  /* z-index: ; */
+}
+.FORUMI-TEXT {
+  width: 47px;
+  color: rgba(255,255,255,0.800000011920929);
+  position: absolute;
+  top: 45px;
+  left: 335px;
+  font-family: TBC Contractica CAPS;
+  font-family: Medium;
+  font-size: 10px;
+  opacity: 1;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.FORUMI-TEXT:hover {
+  width: 47px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 45px;
+  left: 335px;
+  font-family: TBC Contractica CAPS;
+  font-family: Medium;
+  font-size: 10px;
+  opacity: 1;
+  text-align: center;
+  transition-duration: 0.2s;
+}
+.DONACIA-TEXT {
+  width: 52px;
+  color: rgba(255,255,255,0.800000011920929);
+  position: absolute;
+  top: 45px;
+  left: 407px;
+  font-family: TBC Contractica CAPS;
+  font-family: Medium;
+  font-size: 10px;
+  opacity: 1;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.DONACIA-TEXT:hover {
+  width: 52px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 45px;
+  left: 407px;
+  font-family: TBC Contractica CAPS;
+  font-family: Medium;
+  font-size: 10px;
+  opacity: 1;
+  text-align: center;
+  transition-duration: 0.2s;
+}
+#downloadBtn {
+  position: absolute;
+    font-family: 'Bregular';
+    font-family: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    top: 345px;
+    left: 755px;
+    z-index: 1;
+    color: white;
+    z-index: 2;
+}
+
+#downloadBtn:active {
+    position: absolute;
+    font-family: 'Bregular';
+    font-family: bold;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    top: 345px;
+    left: 755px;
+    z-index: 1;
+    color: white;
+    z-index: 2;
+}
+#downloadProgress{
+  position: absolute;
+    top: 500px;
+    width: 420px;
+    height: 35px;
+    left: 515px;
+    accent-color: red;
+}
+.backp{
+    position: absolute;
+    width: 415px; 
+    height: 56px; 
+    background: rgba(0, 0, 0, 0.25); 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 464px;
+    left: 305px;
+}
+#downloadText{
+  height: 476px;
+    color: rgba(231, 231, 231, 1);
+    position: absolute;
+    top: 490px;
+    left: 515px;
+    font-family: TBC Contractica CAPS;
+    font-family: Medium;
+    font-size: 12px;
+    opacity: 1;
+    text-align: right;
+}
+#playerNameInput{
+  position: absolute;
+    font-family: TBC Contractica CAPS;
+    font-family: Medium;
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    height: 49px;
+    width: 232px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: none;
+    top: 435px;
+    left: 705px;
+    text-align: center;
+    color: white;
+    z-index: 0;
+}
+.nameicon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 477px;
+    left: 35px;
+    z-index: 1;
+}
+#photo-news-container {
+    overflow: hidden; /* To handle large images */
+}
+
+#photo-news {
+    opacity: 0; /* Start with the image invisible */
+    transition: opacity 1s ease-in-out; /* Smooth transition for the fade effect */
+}
+
+#photo-news-container {
+    overflow: hidden; /* Hide the sliding images */
+    position: relative;
+}
+
+.photo-news-image {
+    transition: left 1s ease-in-out; /* Slide transition */
+}
+
+.SIAXLEEBI-MANQANA-1 {
+  width: 679px;
+  height: 209px;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 160px;
+  left: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#hiddenButton{
+  position: absolute;
+    font-family: 'Bold';
+    background: linear-gradient(135deg, #3E8BFF 0%, #73ABFF 100%);
+    border: none;
+    width: 141px;
+    height: 56px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    top: 470px;
+    left: 754px;
+}
+
+#connectButton{
+  position: absolute;
+}
+
+#saveButton{
+  position: absolute;
+  transform: translateX(100px) translateY(80px); 
+}
+
+#enb {
+  width: 30px;
+  height: 30px;
+  transform: translateX(770px) translateY(90px);
+  background: none;
+  outline: none;
+  border: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2.5px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+#enb:checked{
+  width: 13px;
+  height: 13px;
+  transform: translateX(765px) translateY(90px);
+  background: none;
+  outline: none;
+  border: none;
+  appearance: none;
+  background: linear-gradient(rgba(62,139,255,1), rgba(114,170,255,1));
+  border-radius: 2.5px;
+  transition-duration: 0.2s;
+}
+#downloadBtn{
+  position: absolute;
+  transform: translateX(100px) translateY(30px);
+}
+#openGame {
+  position: absolute;
+    font-family: 'Bregular';
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    top: 367px;
+    left: 861px;
+    z-index: 1;
+    color: white;
+}
+#openGame:hover {
+    position: absolute;
+    font-family: 'Bregular';
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    top: 367px;
+    left: 861px;
+    z-index: 1;
+    color: white;
+}
+#openGame:active {
+    position: absolute;
+    font-family: 'Bregular';
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    top: 367px;
+    left: 861px;
+    z-index: 1;
+    color: white;
+}
+#submitPlayerName{
+  position: absolute;
+  transform: translateY(100px) translateX(50px);
+}
+#myButton {
+    position: absolute;
+    font-family: TBC Contractica CAPS;
+    font-family: bold;
+    font-size: 13px;
+    background: linear-gradient(135deg, #3E8BFF 0%, #73ABFF 100%);
+    border: none;
+    width: 141px;
+    height: 56px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: rgba(255, 255, 255, 0.80);
+    cursor: pointer;
+    top: 464px;
+    left: 754px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transform: scale(1.05);
+    z-index: 2;
+}
+#myButton:hover {
+    position: absolute;
+    font-family: TBC Contractica CAPS;
+    font-family: bold;
+    font-size: 13px;
+    background: linear-gradient(135deg, #3E8BFF 0%, #73ABFF 100%);
+    border: none;
+    width: 141px;
+    height: 56px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: rgba(255, 255, 255, 0.80);
+    cursor: pointer;
+    top: 464px;
+    left: 754px;
+    transition-duration: 0.2s;
+    transform: scale(1.0);
+    z-index: 2;
+}
+#myButton:active {
+    position: absolute;
+    font-family: TBC Contractica CAPS;
+    font-family: bold;
+    font-size: 13px;
+    background: linear-gradient(135deg, #3E8BFF 0%, #73ABFF 100%);
+    border: none;
+    width: 141px;
+    height: 56px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: rgba(255, 255, 255, 0.80);
+    cursor: pointer;
+    top: 464px;
+    left: 754px;
+    transition-duration: 0.2s;
+    transform: scale(1.05);
+    z-index: 2;
+}
+#update-btn{
+  position: absolute;
+  transform: translateX(50px) translateY(100px);
+}
+#updateButton{
+  position: absolute;
+    font-family: 'Bregular';
+    font-family: bold;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    top: 367px;
+    left: 842px;
+    z-index: 1;
+    color: white;
+}
+#updateButton:hover {
+    position: absolute;
+    font-family: 'Bregular';
+    font-family: bold;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    top: 367px;
+    left: 842px;
+    z-index: 1;
+    color: white;
+}
+#updateButton:active {
+  position: absolute;
+    font-family: 'Bregular';
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    top: 367px;
+    left: 842px;
+    z-index: 1;
+    color: white;
+}
+.serverze-daemata{
+  position: absolute;
+  font-family: 'Mediumi';
+  color: white;
+  font-size: 17px;
+  top: 120px;
+  z-index: 1;
+  left: 20px;
+}
+#player-count{
+  position: absolute;
+  transform: translateY(195px) translateX(-680px);
+  font-size: 12px;
+}
+.SAITI{
+  position: absolute;
+  top: -2px;
+  color: rgba(255,255,255,0.800000011920929);
+  font-family: 'Medium';
+  font-size: 10px;
+  z-index: 1;
+  left: 330px;
+  cursor: pointer;
+}
+.forum{
+  position: absolute;
+  top: -2px;
+  color: rgba(255,255,255,0.800000011920929);
+  font-family: 'Medium';
+  font-size: 10px;
+  z-index: 1;
+  left: 430px;
+  cursor: pointer;
+}
+.donate{
+  position: absolute;
+  top: -2px;
+  color: rgba(255,255,255,0.800000011920929);
+  font-family: 'Medium';
+  font-size: 10px;
+  z-index: 1;
+  left: 510px;
+  cursor: pointer;
+}
+.line-header{
+  position: absolute;
+  top: 1px;
+  left: 250px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./img/bg.png);
+  background-position-x: -20px;
+}
+
+#photo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.saxeli-gvari-icon{
+  position: absolute;
+  top: 478px;
+  left: 60px;
+  z-index: 1;
+}
+
+.server-logoo{
+  position: absolute;
+  width: 97px;
+  height: 93px;
+  top: -5px;
+  left: -10px;
+}
+
+.socialuri{
+  position: absolute;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Bregular';
+  top: 60px;
+  left: 10px;
+  z-index: 1;
+}
+
+.newsi{
+  position: absolute;
+    width: 250px;
+    top: 100px;
+    left: 665px;
+    border-radius: 10px;
+}
+
+.newsi1{
+  position: absolute;
+    width: 250px;
+    top: 250px;
+    left: 665px;
+    border-radius: 10px;
+}
+
+.newsi2{
+  position: absolute;
+  width: 250px;
+  top: 200px;
+  left: 645px;
+}
+#siaxleebi-text{
+  font-family: 'Bregular';
+  position: absolute;
+  color: rgba(255, 255, 255, 1);
+  top: 150px;
+  left: 15px;
+}
+.motamasheebi-raodenoba {
+  width: 200px;
+  height: 100px;
+  background-color: #e6e6e6;
+  border-radius: 50px; /* This creates an oval shape */
+  position: relative;
+  overflow: hidden;
+}
+
+#player-count-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; /* Starts with no fill */
+  height: 100%;
+  background-color: #4CAF50; /* The fill color */
+  transition: width 0.5s ease-in-out;
+}
+.GRAFIKA-BOLO{
+  position: absolute;
+    width: 74px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    /* font-family: TBC Contractica CAPS; */
+    font-family: Medium;
+    font-size: 22px;
+    opacity: 1;
+    text-align: right;
+    transform: translateX(300px) translateY(410px);
+    top: -8px;
+    left: 520px;
+}
+
+.GRAFIKA-TEXT {
+  width: 74px;
+  color: rgba(231,231,231,1);
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  /* font-family: TBC Contractica CAPS; */
+  font-family: Medium;
+  font-size: 14px;
+  opacity: 1;
+  text-align: right;
+  transform: translateX(225px) translateY(410px);
+}
+
+#enb {
+  top: -200px;
+    left: -220px;
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    transform: translateX(402px) translateY(255px);
+    background: none;
+    outline: none;
+    appearance: none;
+    background: rgb(0 0 0 / 80%);
+    border-radius: 12px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+#enb:checked{
+  width: 30px;
+  height: 30px;
+  transform: translateX(402px) translateY(255px);
+  background: none;
+  outline: none;
+  appearance: none;
+  background: rgb(255, 0, 0);
+  border-radius: 12px;
+  transition-duration: 0.2s;
+}
+
+.playername{
+  position: absolute;
+  font-family: 'Bregular';
+  color: rgba(255, 255, 255, 1);
+  top: 60px;
+  left: 700px;
+  z-index: 1;
+}
+
+.bgbutton{
+  position: absolute;
+  width: 160px;
+  top: 20px;
+  left: 240px;
+  z-index: 1;
+}
+
+.bgbutton1{
+  position: absolute;
+  width: 160px;
+  top: 20px;
+  left: 430px;
+  z-index: 1;
+}
+
+.dc{
+
+    cursor: pointer;
+}
+
+.yt{
+
+    cursor: pointer;
+}
+
+.fb{
+    cursor: pointer;
+}
+
+.chamotvirtva{
+  position: absolute;
+    width: 150px;
+    top: 366px;
+    left: 795px;
+    z-index: 1;
+}
+
+nav {
+  position: absolute;
+    top: 15px;
+    left: 425px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    z-index: 5;
+    font-size: 13.54px;
+    font-family: BPG Nino Mtavruli;
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ccc;
+}
+a:active{
+  color: white;
+}
+</style>
+<body>
+    <div>
+      <div style="width: 9.91px; height: 7.27px; background: white"></div>
+      <!-- <div style="position: absolute;top: 330px;left: 860px;z-index: 5;width: 63.15px;height: 23.04px;background: #FF3767;box-shadow: -4.954838752746582px 4.954838752746582px 14.864516258239746px rgba(0, 0, 0, 0.25);border-radius: 2.56px"></div>
+      <div style="position: absolute;z-index: 5;top: 335px;left: 790px;width: 62.76px;height: 20.48px;text-align: center;color: white;font-size: 9.97px;font-family: BPG Nino Mtavruli;font-weight: 400;word-wrap: break-word">გაიგე მეტი</div>
+      <div style="position: absolute;z-index: 5;top: 335px;left: 860px;width: 62.76px;height: 20.48px;text-align: center;color: white;font-size: 9.97px;font-family: BPG Nino Mtavruli;font-weight: 400;word-wrap: break-word; cursor: pointer;">ნახვა</div> -->
+      <div class="dc" id="dc" style="position: absolute;top: 200px;left: 10px;width: 35.84px;height: 35.84px;z-index: 5;background-image: url(./img/dc.png);background-repeat: no-repeat;"></div>
+      <div class="fb" id="fb" style="position: absolute;top: 250px;left: 10px;width: 35.84px;height: 35.84px;z-index: 5;background-image: url(./img/fb.png);background-repeat: no-repeat;"></div>
+      <div class="yt" id="yt" style="position: absolute;top: 300px;left: 10px;width: 35.84px;height: 35.84px;z-index: 5;background-image: url(./img/yt.png);background-repeat: no-repeat;"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <input class="enbsi" type="checkbox">
+        <div class="BG1">
+        <div class="BG2">
+        <!-- <div class="BG3"> -->
+        <div class="container">
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- <span id="playerCount" class="MOTAMASHEEBI-RAODENOBA">1000/1000</span> -->
+        <!-- <div id="playerCount">Loading player count...</div> -->
+        </div>
+        </div>
+        </div>
+        <div id="photo-container">
+          <img id="live-photo" class="newsi" src="https://sampnativephp.000webhostapp.com/news.png" alt="">
+          <img id="live-photoo" class="newsi1" src="https://sampnativephp.000webhostapp.com/news1.png" alt="">
+        </div>
+        <nav>
+          <a style="color: white;" href="#">მთავარი</a>
+          <a style="color: white;" target="_blank" href="https://www.facebook.com/groups/Acerpsamp">ჯგუფი</a>
+          <a style="color: white;" target="_blank" href="http://Ace-rp.ge/">საიტი</a>
+          <a style="color: white;" target="_blank" href="https://discord.gg/jDF9GvnjrU">სიახლეები</a>
+      </nav>
+        <div id="exit" class="GASVLA">
+        </div>
+        <div id="mini" class="CHAKECVA">
+        </div>
+        </div>
+        <div id="set" class="SET">
+        </div>
+        </div>
+        <!-- <div id="lan" class="LAN"> -->
+        </div>
+        <div class="SAITI">
+        <div class="SAITI-BG">
+        </div>
+        </div>
+        </div>
+        </div>
+        <div id="settingsdiv" style=" display: none; position: absolute;top: 150px;left: 360px;width: 232px;height: 100px;background: rgba(15, 16, 21, 0.81);border-radius: 8px;z-index: 5;">
+        <h1 style="position: absolute;top: -10px;left: 70px;color: white;">გრაფიკა</h1>
+        <h1 style="position: absolute;top: 42px;left: 10px;color: white;font-size: 21px;">ENB გრაფიკა:</h1>
+        <input  id="enb" type="checkbox">
+        </div>
+        <div class="startmenu">
+            <input id="name" placeholder="შეიყვანეთ სახელი" type="text">
+            <div id="warning" style="display: none; color: white; font-size: 15px; font-family: BPG Nino Mtavruli; font-family: 400; word-wrap: break-word">გაფრთხილება!თამაშის დასაწყებად საჭიროა<br/> ჩამოტვირთოთ ყველა საჭირო ფაილი</div>
+        </div>
+        <h4 id="downloadBtn">Install</h4>
+        <img class="chamotvirtva" src="./img/Rectangle 4944.png" alt="">
+    </div>
+    <br>
+    <span id="downloadText" class="downloadText" style="display: none;">გთხოვთ მოითმინოთ მიმდინარეობს თამაშის ინსტალაცია...</span>
+    <br>
+    <progress id="downloadProgress" value="0" max="100" style="display: none;"></progress>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalText">Some text in the Modal..</p>
+        </div>
+    </div>
+    <!-- <div style="left: 685px;top: 180px;position: absolute;color: #3b3b3b;font-size: 13.54px;font-family: BPG Nino Mtavruli;font-weight: 700;word-wrap: break-word">სერვერის</div>
+    <div style="left: 755px;top: 180px;position: absolute;color: white;font-size: 13.54px;font-family: BPG Nino Mtavruli;font-weight: 700;word-wrap: break-word">სიახლეები</div>
+    <div style="left: 880px;top: 180px;/* width: 10px; *//* height: 10px; */position: absolute;color: #3b3b3b;font-size: 15.54px;font-family: BPG Nino Mtavruli;font-weight: 700;word-wrap: break-word;"><</div>
+    <div style="left: 900px;top: 180px;/* width: 10px; *//* height: 10px; */position: absolute;color: white;font-size: 15.54px;font-family: BPG Nino Mtavruli;font-weight: 700;word-wrap: break-word;">></div> -->
+    <button id="hiddenButton" style="display: none;">Update Available</button>
+    <!--<span class="GRAFIKA-BOLO">ENB:</span>-->
+    <input style="display: none;" id="enb" type="checkbox">
+    <input type="text" class="text" id="playerNameInput" placeholder="შეიყვანეთ სახელი"/>
+    <img style="position: absolute;
+    top: 445px;
+    left: 715px;" src="./img/player.png" alt="">
+    <button id="minimizeButton">Minimize</button>
+    <button id="download-button">Download ZIP</button>
+    <progress id="download-progress" max="100" value="0"></progress>
+    <h4 id="openGame" class="openGame" style="display: none;">Play</h4>
+    <!-- <div class="playerCount"></div> -->
+    <button id="versionCheckButton" style="display: none;">Check Version</button>
+    <h4 id="updateButton" class="update" style="display: none;">Update</h4>
+    <div class="newsframe" style="width: 380px; height: 216px; border-radius: 10px"></div>
+    <script src="renderer.js"></script>
+</body>
+<script>
+  const setDiv = document.getElementById('set');
+  const settingsDiv = document.getElementById('settingsdiv');
+
+  setDiv.addEventListener('click', function() {
+      if (settingsDiv.style.display === 'none') {
+          settingsDiv.style.display = 'block';
+      } else {
+          settingsDiv.style.display = 'none';
+      }
+  });
+  document.getElementById('dc').addEventListener('click', function() {
+  window.open('https://discord.gg/jDF9GvnjrU', '_blank');
+  });
+  document.getElementById('fb').addEventListener('click', function() {
+  window.open('https://www.facebook.com/groups/Acerpsamp', '_blank');
+  });
+  document.getElementById('yt').addEventListener('click', function() {
+  window.open('https://www.youtube.com/@AceX', '_blank');
+  });
+</script>
